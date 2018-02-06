@@ -1,0 +1,33 @@
+Variante do Web Exercise 2.1.5 (Voting Machines)
+
+Este exercício é uma continuação do Web Exercise 2.1.5 (Voting Machines), que você já fez. Estude novamente o enunciado daquele exercício, como dado no Paca.
+
+Queremos entender melhor quantos votos o candidato A recebe. Suponha novamente que estão dadas as quantidades N, a, f e T. Se f fosse zero, o candidato A receberia a * N votos. Como, em geral f > 0, o número de votos que A recebe, digamos X_A, torna-se uma quantidade aleatória (depende de como as urnas eletrônicas se comportam na eleição).
+
+Lembre que simulamos T vezes a eleição com os parâmetros N, a e f. Em cada simulação, X_A tem um valor. Seu programa deve calcular a média M e desvio padrão D desses T números X_A que seu programa obterá ao simular a eleição T vezes. Para calcular M e D, use as funções apropriadas de StdStats.
+
+Para entender como é a distribuição dos T números X_A que seu programa obtém, você deve fazer um histograma desses números. Para entender como isso pode ser feito, estude o programa Bernoulli.java.
+
+A distribuição dos números X_A pode ser aproximada por uma distribuição Gaussiana. Além de gerar o histograma dos números X_A, você deve desenhar o gráfico de uma Gaussiana que aproxima o histograma (da mesma forma que em Bernoulli.java). Para ajustar a Gaussiana aos números X_A obtidos, você deve usar os valores de M e D que você já calculou. Isto é, você deve usar a Gaussiana de média M e desvio padrão D.
+
+Além de calcular e enviar os valores de M e D para a saída padrão, seu programa deve gerar imagens como as dadas abaixo. Nesses exemplos, os parâmetros a, f e T são sempre 60%, 20% e 10000 (isto é, 60% dos votantes votam no candidato A, as urnas falham com probabilidade 20% e a eleição é simulada 10000 vezes). O valor de N varia de imagem para imagem: N = 50, 100, 200, 400, 800, 1600. A reta vermelha indica o ponto X_A = N/2. A curva azul é a Gaussiana que aproxima o histograma.
+
+Use StdDraw.save() para criar arquivos jpg como dados abaixo.
+
+Observação. Nas imagens dadas como exemplo, a escala do eixo Y foi ajustada para que a barra mais alta do histograma tenha altura igual a 0.91 (a altura da janela é 1.0) [corrigido: antes estava dito 0.8 em 1.0; o correto é 0.91 em 1.0]. Para ajustar a escala do eixo Y, você pode usar a função StdDraw.setYscale(). Vimos o uso dessa função no programa PlotFilter.java:
+
+http://introcs.cs.princeton.edu/java/15inout/
+
+Seu programa deve se chamar VotingMachinesGraph.java. É obrigatório desenhar o histograma e a linha vermelha (fazer exatamente igual a imagem) e utilizar as funções de StdStats. Veja que a entrada para esse programa é igual ao Voting Machine, ou seja, deve receber os argumentos N, a, f e T. Deve também salvar uma imagem com o seguinte nome: histogram-{N}-{a}-{f}-{T}.jpg, igual dos exemplos nesse enunciado.
+
+$ java-introcs VotingMachinesGraph 100 0.6 0.2 1000
+M = 60.21312
+D = 0.2033412
+
+(valores fictícios, não testados)
+
+$ java-introcs VotingMachinesGraph 100 0.6 0.2 1000
+M = 56.283
+D = 3.8969343203468374
+
+(Execução real)

@@ -1,0 +1,57 @@
+Web Ex. 1.4.10 (Connect four)
+
+Faça o Web Exercise 1.4.10 (Connect four) de IntroCS:
+
+http://introcs.cs.princeton.edu/java/14array/
+
+(i) Inicialmente, você deve escrever o programa ConnFourGenerator.java para gerar configurações aleatórias N por N de '*', 'X' e 'O', com cada símbolo aparecendo com probabilidade 1/3. Seu programa deve receber como argumento o valor de N. Seu programa deve também receber um argumento adicional (0 ou 1), que indica se queremos a saída na forma tabular ou linear, como nos exemplos abaixo:
+
+$ java ConnFourGenerator 4 0
+* * O O
+O * X *
+O O O O
+O X * *
+
+$ java ConnFourGenerator 4 1
+*OXX*OXOX*X*O**O
+
+$ java ConnFourGenerator 10 0
+* X O * O * X X * X
+O * X O O O X * * O
+X X * X O * X X * *
+O O O X O X X * X O
+X X X O O X O X * X
+X O X O * O O X X X
+X O X X O X * * X X
+X O O * * * X O * O
+* * X * * X O X * O
+O X O X O X * * X *
+
+$ java ConnFourGenerator 10 1
+O*XX**OX*X****O*XOX**O**OXOO*XO**OOOXXXOXXOO*OXXXOO*OXOX*OOXX*OOXO*XXXOX*OXO*O*O**XO*OXO*XXO**XXO*OX
+
+(ii) Você deve escrever o programa ConnFour.java que recebe uma configuração N por N de '*', 'X' e 'O' como argumento e encontra uma sequência contígua mais longa de símbolos do mesmo tipo, como especificado no enunciado do Web Ex. 1.4.10.
+
+Exemplos de execução:
+
+$ java ConnFour OOXX*XOOOXOXOXXO
+O O X X
+* X O O
+O X O X
+O X X O
+3 / (1, 1) [X / v]
+
+$ java ConnFour O*XOXOO**XO*OX*O*OOX*O*O**OXXX*X*OX*OOOXXOOOO*XXO**O*O*O*O*XOO*XOOXX*OOXX*XOOOXOXOXXOXXXXXXX*XOXXXX*
+O * X O X O O * * X
+O * O X * O * O O X
+* O * O * * O X X X
+* X * O X * O O O X
+X O O O O * X X O *
+* O * O * O * O * X
+O O * X O O X X * O
+O X X * X O O O X O
+X O X X O X X X X X
+X X * X O X X X X *
+5 / (8, 5) [X / h]
+
+No primeiro exemplo acima, a sequêcia encontrada tem comprimento 3, começa na entrada (1, 1), é uma sequência de X e é vertical. Analogamente, no segundo exemplo, a sequêcia encontrada tem comprimento 5, começa na entrada (8, 5), é uma sequência de X e é horizontal.

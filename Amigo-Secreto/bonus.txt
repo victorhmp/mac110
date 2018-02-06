@@ -1,0 +1,19 @@
+/******************************************************************************
+ *
+ * MAC0110 - Introdução à Computação
+ * Aluno: Victor Hugo Miranda Pinto
+ * Numero USP: 10297720
+ * Tarefa: Ex. 2 - Amigo Secreto
+ * Data: 16/04/2017
+ *
+ ******************************************************************************/
+
+Para encontrar a fórmula fechada que nos fornece p_N, vamos considerar o seguinte:
+
+Um jogo com N pessoas, e uma sequencia a[N] gerada aleatóriamente, com N inteiros, indexados de 0 a N-1.
+A pessoa 0 começa o jogo, e terá que dar seu presente para a pessoa a[0], que então dará seu presente para a[a[0]] e assim sucessivamente, como descrito no enunciado do problema. Como queremos que a pessoa 0, que iniciou o jogo, seja a última a receber seu presente, para encontar a probabilidade desse fenômeno ocorrer vamos encontrar a probabilidade de a pessoa 0 não receber seu presente em nenhuma das rodadas anteriores. 
+A probabilidade de a pessoa a[0] NÃO ser a pessoa 0 é de (N-1)/N. Sendo assim, a probabilidade da pessoa para a qual a[0] dará seu presente a[a[0]] NÃO ser a pessoa 0 é de (N-2)/(N-1). Da mesma maneira, a probabilidade da pessoa para a qual a[a[0]] dará seu presente NÃO ser a pessoa 0 é de (N-3)/(N-2). Isso é válido até que só reste a pessoa 0 para receber seu presente, e a probabilidade de NÃO ser 0 a próxima pessoa a receber é igual a 0.
+
+Assim, temos: p_N = [(N-1)/N] * [(N-2)/(N-1)] * [(N-3)/(N-2)]...[(N-(N-2))/(N-(N-1))] * 1 = 1/N
+             
+             								=> p_N = 1/N

@@ -1,0 +1,21 @@
+Web Ex. 1.4.6 (Linear feedback shift register; variante)
+
+Faça a seguinte variante do Web Exercise 1.4.6 (Linear feedback shift register). Seu programa LFSRGen.java deve receber na linha de comando a "semente" e o "tap" a serem usados em seu LFSR. Além disso, um terceiro argumento deve especificar quantos bits devem ser gerados. Exemplos de execução:
+
+$ java LFSRGen 01101000010 8 40
+1100100100111101101110010110101110011000
+
+$ java LFSRGen 01101000010 8 5
+11001
+
+$ java LFSRGen 01110001010 8 40
+1011010000001100100001111101001100010011
+
+$ java LFSRGen 01110001010 7 40
+1111101110100100110100000100101001000011
+
+Este exercício é uma parte inicial do exercício em
+
+http://www.cs.princeton.edu/courses/archive/spr15/cos126/assignments/lfsr.html
+
+que você fará mais para frente.

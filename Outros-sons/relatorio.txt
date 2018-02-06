@@ -1,0 +1,35 @@
+/******************************************************************************
+ *
+ *  MAC0110 - Introdução à Computação
+ *  Aluno: Victor Hugo Miranda Pinto
+ *  Numero USP: 10297720
+ *  Tarefa: Ex. 5 (Outros sons)
+ *  Data: 07/05/2017
+ *
+ *  Baseado em PlayThatTuneDeluxe.java / PlayThatChord.java
+ *
+ *  DECLARO QUE SOU O ÚNICO AUTOR E RESPONSÁVEL POR ESTE PROGRAMA.  TODAS AS 
+ *  PARTES DO PROGRAMA, EXCETO AS QUE SÃO BASEADAS EM MATERIAL FORNECIDO  
+ *  PELO PROFESSOR OU COPIADAS DO LIVRO OU DAS BIBLIOTECAS DE SEDGEWICK & WAYNE, 
+ *  FORAM DESENVOLVIDAS POR MIM.  DECLARO TAMBÉM QUE SOU RESPONSÁVEL POR TODAS 
+ *  AS CÓPIAS DESTE PROGRAMA E QUE NÃO DISTRIBUÍ NEM FACILITEI A DISTRIBUIÇÃO
+ *  DE CÓPIAS DESTA PROGRAMA.
+ *
+ ******************************************************************************/
+
+TESTANDO COM A FUNÇÃO WAVE() DIFERENTES MÉTODOS DE CALCULAR A[I]
+
+1) Para a[i] = .997*(19*a[j] + a[j+1])/20
+	Observei um som mais agudo e mais alto quando reproduzindo o arquivo StairwayToHeaven.txt, com o método proposto e depois com o método em questão.
+
+2) Para a[i] = .997*(a[j] + a[j+3])/2
+	Observei um som bem distinto, "robótico" de certa forma. Também um pouco de ruído agudo ao fundo.
+
+3) Para a[i] = .997*(9*a[j] + a[j+5])/10
+	Observei notas mais agudas, mais "metálicas". A presença de ruído agudo ao fundo é bem mais notável, principalmente para valores maiores de pitch.
+
+4) Para a[i] = .997*(8*a[j] + a[j+2] + a[j+8])/10
+	Observei notas tão agudas quanto no teste anterior, com a mesma característica "metálica", porém sem o ruído de fundo.
+
+5) Para a[i] = Math.sin(2 * Math.PI * i * hz / StdAudio.SAMPLE_RATE), ou seja, método que usa uma senóide
+	Observa-se um som semelhante ao de video-games antigos, nitidamente gerados por computador, quando comparado com os sons gerados pelo algoritmo de Karplus-Strong, que gera sons próximos aos de um violão ou guitarra.

@@ -1,0 +1,5 @@
+Web Ex. 1.3.81 (Powers of k)
+
+Faça o Web Exercise 1.3.81 (Powers of k) de IntroCS:
+
+http://introcs.cs.princeton.edu/java/13flow/

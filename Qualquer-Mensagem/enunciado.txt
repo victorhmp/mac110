@@ -1,0 +1,17 @@
+Lembre o exemplo visto em sala:
+
+Alice quer enviar a mensagem SENDMONEY para Bob.
+
+Alice e Bob têm a chave comum yT25a5i/S.
+
+Usando o algoritmo de one-time pad, Alice produz o texto cifrado gX76W3v7K, que ela envia para Bob.
+
+Eve consegue acesso à mensagem cifrada gX76W3v7K. Ela tenta todas as chaves possíveis para decriptar esta mensagem cifrada. Entretanto, ao tentar a chave tTtpWk+1E, ela obtém o texto NEWTATTOO (veja página 19 da aula "Prologue: A Simple Machine"). Assim, ela poderia pensar (incorretamente) que a mensagem que Alice enviou a Bob é NEWTATTOO.
+
+1. Mostre que há uma chave que, quando usada por Eve, gera o texto ILikeEve+.
+
+2. Mostre também que existe uma chave que gera o texto IHateEve+.
+
+3. Mais geralmente, prove que, para qualquer texto de 9 caracteres da tabela Base64 (página 9 das transparências), há uma chave que a gera.
+
+4. Bônus: encontre as chaves que geram ILikeEve+ e IHateEve+.

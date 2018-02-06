@@ -1,0 +1,23 @@
+Variante final do Web Ex. 2.1.5 (Voting machines)
+
+Este é a terceiro e último exercício baseado no Web Exercise 2.1.5 (Voting Machines) de IntroCS:
+
+http://introcs.cs.princeton.edu/java/21function/
+
+(Este exercício aparece como o Creative Exercise 2.2.24 no livro; veja arquivo anexo abaixo. Releia os enunciados dos dois exercícios anteriores baseados no Web Exercise 2.1.5.)
+
+Você descobriu algo possivelmente um tanto não intuitivo quando estimou a maior probabilidade de falha tolerável f. Lembre que definimos f como tolerável se a probabilidade p(N, a, f) de B ser declarado vencedor for menor ou igual a 3%. Supomos aqui que a > 0.5; isto, mais de 50% dos votantes votam em A (assim, B ser declarado vencedor é um erro).
+
+Você deve ter descoberto que probabilidades de falha um tanto altas (valores um tanto altos de f) são toleráveis. Por exemplo, a chance de B ser eleito é extremamente baixa quando N = 100000, a = 55% e f = 40% (isto é, em média, com 4 em cada 10 votos indo para o candidato errado!).
+
+O fato de f poder ser um tanto grande tem a ver com o comportamento da função p(N, a, f) quando N é grande e a é razoavelmente maior que 0.5 (50%). Nesses casos, p(N, a, f) é pequeno quando f é pequeno e ele permanece pequeno mesmo quando f cresce e se aproxima de 0.5. Entretanto, em torno de f = 0.5, o valor de p(N, a, f) cresce subitamente e atinge 1.0 rapidamente quando f passa de 0.5.
+
+Nesse exercício, você deve escrever um programa, chamado VotingPlot.java, que recebe os valores de N e a como argumentos de linha de comando e que produz um gráfico (estimado) da função p(N, a, f). Lembre que você estimou p(N, a, f) simulando a eleição com esses parâmetros T vezes. Dessa forma, seu programa deve também receber T como argumento de linha de comando.  A execução de seu programa seria portanto algo como
+
+$ java-introcs VotingPlot 10000 .55 3000
+
+(na execução acima, N = 10000, a = .55 e T = 3000).
+
+Exemplos de gráficos (estimados) seguem abaixo. O nome do arquivo contém os valores de N, a e T. Nos exemplos, há também duas retas vermelhas, que indicam valores importantes: a reta vertical está no ponto f = 0.5 e a reta horizontal está no valor p = 0.03 (isto é, o valor de 3% que declaramos ser o limite de erro tolerável). Seu programa deve também inserir essas duas retas vermelhas na figura.
+
+Você deve usar "adaptive plot" (como em PercolationPlot.java/PercPlot.java).

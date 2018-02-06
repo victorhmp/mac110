@@ -1,0 +1,25 @@
+Ex. 2 (Amigo secreto)
+
+Um grupo de N amigos decide promover um amigo secreto. Para tal, eles usam um gerador de permutações aleatórias dos números 0, ... , N - 1. Se o gerador gera a permutação armazenada no vetor a[], eles fazem o seguinte:
+
+- A pessoa 0 dá seu presente para a pessoa a[0]
+- A pessoa a[0] dá seu presente para a pessoa a[a[0]]
+- A pessoa a[a[0]] dá seu presente para a pessoa a[a[a[0]]] e assim por diante.
+- Se todos deram seus presentes, o processo termina. Caso contrário, uma pessoa que ainda não seu presente, escolhida arbitrariamente, recomeça o processo.
+
+Por exemplo, se N = 6 e a = { 3, 0, 4, 2, 5, 1 }, então
+
+- A pessoa 0 dá seu presente para a pessoa 3
+- A pessoa 3 dá seu presente para a pessoa 2
+- A pessoa 2 dá seu presente para a pessoa 4
+- A pessoa 4 dá seu presente para a pessoa 5
+- A pessoa 5 dá seu presente para a pessoa 1
+- A pessoa 1 dá seu presente para a pessoa 0
+
+Os N amigos executam esse plano, e percebem que a pessoa 0, que deu seu presente no começo do jogo, recebeu seu presente somente no fim do jogo, depois de todos os outros terem ganhado seus presentes (como no exemplo acima). Eles ficam um tanto surpresos, e decidem investigar qual é a probabilidade p_N de acontecer tal "fenômeno S" ("S" de "surpreendente"). (A probabilidade é denotada p_N pois deve depender de N.)
+
+Escreva um programa que estima p_N.
+
+Mais precisamente, seu programa deve receber como entrada inteiros NMAX e T. Seu programa deve ter como saída as estimativas obtidas para p_2, p_3, ... , p_NMAX. Para obter cada p_N, seu programa deve simular o processo para N pessoas T vezes.
+
+Bônus. Encontre uma fórmula fechada para p_N. Justifique sua resposta.

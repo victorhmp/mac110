@@ -1,0 +1,46 @@
+Ex. 6 (Base B)
+
+Seja B um inteiro maior ou igual a 2. Escreva um par de programas para fazer a conversão de inteiros não-negativos para a base B e da base B. Os detalhes são como segue.
+
+0. Vamos supor que B <= 36. Assim, você pode (e deve) usar os "dígitos" 0, 1, ... , 9, a, b, ... , z para representar um inteiro na base B. Aqui, 'a' representa o dígito 10, 'b' representa o dígito 11, etc.
+
+1. Escreva um programa chamado IntToBaseB.java que faz a conversão de inteiros dados em base 10 para a base B. Seu programa deve receber B como argumento de linha de comando e deve receber os inteiros escritos em base 10 a serem convertidos na entrada padrão. A saída deve ser enviada para a saída padrão.
+
+Exemplo de execução:
+
+$ cat 5.in
+99291
+798315
+816952
+323516
+942059
+$ java-introcs IntToBaseB 16 < 5.in > 5.16.out
+$ cat 5.16.out
+183db
+c2e6b
+c7738
+4efbc
+e5feb
+
+2. Escreva um programa chamado IntFromBaseB.java que faz a conversão de inteiros dados em base B para a base 10. Seu programa deve receber B como argumento de linha de comando e deve receber os inteiros escritos em base B a serem convertidos na entrada padrão. A saída deve ser enviada para a saída padrão.
+
+Exemplo de execução:
+
+$ java-introcs IntFromBaseB 16 < 5.16.out
+99291
+798315
+816952
+323516
+942059
+
+3. Seu programa IntToBaseB.java deve necessariamente conter uma função de assinatura
+
+public static String baseB(int n, int B)
+
+que devolve a representação do inteiro n na base B como um string. Esta função deve estar implementada necessariamente de forma recursiva.
+
+4. Seu programa IntFromBaseB.java deve necessariamente conter uma função de assinatura
+
+public static int integerFromB(String s, int B)
+
+que devolve o inteiro que o string s representa quando interpretado como um número escrito na base B. Esta função deve estar implementada necessariamente de forma recursiva.

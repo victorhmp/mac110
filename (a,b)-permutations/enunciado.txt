@@ -1,0 +1,28 @@
+Ex. 9 ((a, b)-permutações)
+
+Vamos considerar aqui permutações das letras 'a', ..., 'z'. Mais precisamente, dado n, vamos considerar permutações das n primeiras letras 'a', 'b', .... Seu programa deve receber n e dois outros inteiros a e b, e deve imprimir todas as "(a, b)-permutações" das n primeiras letras do alfabeto. Neste exercício, (a, b)-permutações são definidas como segue.
+
+Considere a permutação
+
+p = dbac
+
+(n = 4 nesse caso). Note que esta permutação p contém as subsequências crescentes (não-vazias)
+
+d, b, a, c, bc, ac
+
+e as subsequências decrescentes (não-vazias)
+
+d, b, a, c, db, da, dc, ba, dba.
+
+Como todas as subsequências crescentes de p têm comprimento no máximo 2 e as subsequências decrescentes de p têm comprimento no máximo 3, dizemos que p é uma (2, 3)-permutação. Por definição, a permutação p é também uma (a, b)-permutação para quaisquer a e b com a >= 2 e b >= 3.
+
+Escreva um programa que recebe n, a e b como argumentos de linha de comando e que imprime todas as (a, b)-permutações das n primeiras letras do alfabeto 'a', ..., 'z'. Você deve supor que n <= 26.
+
+Escreva seu programa de forma que ele também receba um quarto inteiro m na linha de comando. Quando m = 0, seu programa deve simplesmente imprimir a lista das (a, b)-permutações. Quando m = 1, seu programa deve imprimir apenas o número de tais permutações. Quando m = 2, seu programa deve imprimir tanto a lista de tais permutações como o número total delas.
+
+
+Exemplos de execução. Veja alguns exemplos de execução nos arquivos anexos. Os tempos de execução de seu programa devem ser comparáveis aos tempos nesses exemplos.
+
+Observação. Neste exercício, você pode usar variáveis globais. Certifique-se de que você saberia escrever seu programa sem variáveis globais também.
+
+Bônus. Quando n é grande em relação ao par de inteiros (a, b), o número de (a, b)-permutações torna-se 0. Qual é o menor valor de n para o qual isso acontece? (Naturalmente, tal valor de n é uma função de a e b. O que queremos é saber que função é essa.) Justifique sua resposta.

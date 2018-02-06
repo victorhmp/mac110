@@ -1,0 +1,52 @@
+Variante do Web Exercise 2.3.51 (Unix diff)
+
+Estude o Web Exercise 2.3.51 (Unix diff) de IntroCS:
+
+http://introcs.cs.princeton.edu/java/23recursion/
+
+Você pode ler sobre o utilitário diff aqui:
+
+https://en.wikipedia.org/wiki/Diff_utility
+
+(e, naturalmente, também fazendo man diff).
+
+Escreva uma variante do programa Diff.java, digamos DiffLines.java, que compara duas linhas dadas e marca as diferenças entre as duas linhas. O melhor é estudarmos um exemplo.
+
+Suponha que temos as duas linhas
+
+Happy families are all alike; every unhappy family is unhappy in its own way.
+Happy families are alike; every unhapy family is unhappy on its own way.
+
+Seu programa deve produzir a seguinte saída quando alimentado com as duas alinhas acima:
+
+First line:
+Happy families are *all* alike; every *unhappy* family is unhappy *in* its own way.
+Second line:
+Happy families are alike; every *unhapy* family is unhappy *on* its own way.
+
+Note que as palavras entre '*' são as "diferenças" entre as duas linhas dadas.
+
+Seu programa deve ler as linhas dadas e deve decompô-las em "palavras" (cadeias maximais de strings separadas por espaços). Compare a sequência de palavras da primeira linha contra a sequência de palavras da segunda linha usando o algoritmo do LCS. Marque as diferenças com '*'.
+
+Observação. Para decompor um string em palavras, você pode usar split(), como no exemplo abaixo:
+
+String l = StdIn.readLine();
+String[] s = l.split("\\s+");
+for (int i = 0; i < s.length; i++)
+    StdOut.print(s[i] + " ");
+
+Um exemplo maior. Anexos seguem arquivos que ilustram o funcionamento desejado em um exemplo maior. O arquivo de saída foi produzido fazendo
+
+$ cat l0.txt l1.txt | java-introcs DiffLines > l.out
+
+O comando cat concatena os arquivos dados (l0.txt e l1.txt no exemplo acima).  O exemplo pequeno acima foi produzido de foma semelhante: 
+
+$ cat e0.txt
+Happy families are all alike; every unhappy family is unhappy in its own way.
+$ cat e1.txt
+Happy families are alike; every unhapy family is unhappy on its own way.
+$ cat e0.txt e1.txt | java-introcs DiffLines
+First line:
+Happy families are *all* alike; every *unhappy* family is unhappy *in* its own way.
+Second line:
+Happy families are alike; every *unhapy* family is unhappy *on* its own way.

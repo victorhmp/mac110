@@ -1,0 +1,46 @@
+Web Ex. 2.3.33 (Interleaving two strings)
+
+Faça o Web Exercise 2.3.33, Interleaving two strings, de IntroCS:
+
+http://introcs.cs.princeton.edu/java/23recursion/
+
+Chame seu programa de Shuffle.java.  Seguem alguns exemplos de execução.
+
+$ java-introcs Shuffle ab DEF
+abDEF
+aDbEF
+aDEbF
+aDEFb
+DabEF
+DaEbF
+DaEFb
+DEabF
+DEaFb
+DEFab
+$ java-introcs Shuffle abc DEF
+abcDEF
+abDcEF
+abDEcF
+abDEFc
+aDbcEF
+aDbEcF
+aDbEFc
+aDEbcF
+aDEbFc
+aDEFbc
+DabcEF
+DabEcF
+DabEFc
+DaEbcF
+DaEbFc
+DaEFbc
+DEabcF
+DEabFc
+DEaFbc
+DEFabc
+$ java-introcs Shuffle a DEFG
+aDEFG
+DaEFG
+DEaFG
+DEFaG
+DEFGa

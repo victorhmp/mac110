@@ -1,0 +1,85 @@
+Ex. 7 (Morfismos)
+
+Vamos descrever um método que computa strings a partir de strings. Por simplicidade, vamos supor que todos os nossos strings são binários (somente envolvem os caracteres '0' e '1').
+
+Este método depende de fixarmos dois strings, digamos s e t. Definimos uma função f que leva strings em strings da seguinte forma: f(0) = s, f(1) = t e se u tem comprimento l > 1, então
+
+f(u) = f(u(0)) + f(u(1)) + ... + f(u(l - 1)),
+
+onde u(i) é o i-ésimo caractere de u e '+' acima significa concatenação.
+
+Exemplo.  Suponha s = 01, t = 10 e u = 010. Então
+
+f(u) = f(010) = f(0) + f(1) + f(0) = s + t + s = 011001.
+
+Escreva um programa chamado Morphism.java como segue. Seu programa deve receber s e t como argumentos de linha de comando. Além de s e t, seu programa ainda deve receber um inteiro não-negativo n na linha de comando. Seu programa deve receber um string u na entrada padrão e deve enviar para a saída padrão os n + 1 strings
+
+f^0(u)
+f^1(u)
+f^2(u)
+...
+f^n(u)
+
+Acima, f^i(u) significa f(f(...(f(u))...)), onde a função f está sendo aplicada i vezes. Assim, a saída deve ser
+
+u
+f(u)
+f(f(u))
+...
+f(f(...(f(u))...))  // f aplicada n vezes
+
+Exemplo. Seu programa deve se comportar como nos exemplos abaixo.
+
+$ java-introcs Morphism 01 10 6 > 0.6.out
+0
+$ cat 0.6.out
+0
+01
+0110
+01101001
+0110100110010110
+01101001100101101001011001101001
+0110100110010110100101100110100110010110011010010110100110010110
+$ java-introcs Morphism 01 10 4 > 010.4.out
+010
+$ cat 010.4.out
+010
+011001
+011010010110
+011010011001011001101001
+011010011001011010010110011010010110100110010110
+
+Observação. Seu programa deve demorar tempo basicamente proporcional ao número de caracteres na saída.
+
+Observação. Note que os exemplos acima geram as sequências Thue--Morse, que já encontramos anteriormente.  Veja
+
+https://en.wikipedia.org/wiki/Thue%E2%80%93Morse_sequence
+
+Mais um exemplo. No exemplo a seguir, produzimos palavras que são conhecidas como palavras de Fibonacci:
+
+$ java-introcs Morphism 01 0 9 > Fibonacci.9.out
+0
+$ cat Fibonacci.9.out
+0
+01
+010
+01001
+01001010
+0100101001001
+010010100100101001010
+0100101001001010010100100101001001
+0100101001001010010100100101001001010010100100101001010
+01001010010010100101001001010010010100101001001010010100100101001001010010100100101001001
+$ java-introcs Morphism 01 0 9 > Fibonacci.9b.out
+1
+$ cat Fibonacci.9b.out
+1
+0
+01
+010
+01001
+01001010
+0100101001001
+010010100100101001010
+0100101001001010010100100101001001
+0100101001001010010100100101001001010010100100101001010

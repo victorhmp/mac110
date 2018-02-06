@@ -1,0 +1,27 @@
+/******************************************************************************
+ *
+ *  MAC0110 - Introdução à Computação
+ *  Aluno: Victor Hugo Miranda Pinto
+ *  Numero USP: 10297720
+ *  Tarefa: Ex. 0 (Qualquer mensagem)
+ *  Data: 25/03/2017
+ *
+ ******************************************************************************/
+ 
+ 1. Como o sistema utilizada para criptografar as mensagens na situação mostrada é o one-time pad, que funciona baseado na existência de uma chave que por meio de operações XOR (^) realiza a codificação e decodificação de uma mensagem, é esperado que, a partir de qualquer sequência de 0's e 1's, aliado com uma chave binária de mesmo tamanho, se consiga chegar a qualquer outra combinação desejada. Existe uma chave que quando aplicada no texto cifrado enviado por Alice por meio de XOR's bit a bit, ira gerar a sequencia binária que quando decodificada revela a mensagem "ILikeEve+".
+ 
+ 2. Pela mesma propriedade citada no item anterior, da mesma maneira que existe a chave que gera "ILikeEve+", certamente existe outra chave que quando aplicada a mensagem cifrada revela "IHateEve+".
+ 
+ 3. Um texto qualquer de 9 caracteres da tabela Base64 é constituído de 6*9 = 54 bits. Uma chave que gera esse texto a partir de uma mensagem já encriptada terá o mesmo número de bits (0's e 1's) e, de acordo com as propriedades do método de one-time pad, com uso de operações XOR é possível obter qualquer sequência de bits desejada, ou seja, para qualquer dada mensagem encriptada com com uma chave desconhecida, é possível definir uma chave que, quando utilizada para operações de XOR, revela uma sequencia de bits podendo ser essa igual ou não à original, tendo significado ou não quando convertida para caracteres.
+
+4. Ciphertext (gx76W3v7K):      1 0 0 0 0 0   0 1 0 1 1 1  1 1 1 0 1 1   1 1 1 0 1 0   0 1 0 1 1 0   1 1 0 1 1 1   1 0 1 1 1 1   1 1 1 0 1 1   0 0 1 0 1 0
+    One-time pad : (ocZeYzAl0)  1 0 1 0 0 0   0 1 1 1 0 0  0 1 1 0 0 1   0 1 1 1 1 0   0 1 1 0 0 0   1 1 0 0 1 1   0 0 0 0 0 0   1 0 0 1 0 1   1 1 0 1 0 0
+    Message (ILikeEve+) :           0 0 1 0 0 0  0 0 1 0 1 1  1 0 0 0 1 0   1 0 0 1 0 0   0 1 1 1 1 0    0 0 0 1 0 0   1 0 1 1 1 1   0 1 1 1 1 0   1 1 1 1 1 0    
+
+    Ciphertext (gx76W3v7K):      1 0 0 0 0 0   0 1 0 1 1 1  1 1 1 0 1 1   1 1 1 0 1 0   0 1 0 1 1 0   1 1 0 1 1 1   1 0 1 1 1 1   1 1 1 0 1 1   0 0 1 0 1 0
+    One-time pad : (oQhXIzAl0)  1 0 1 0 0 0   0 1 0 0 0 0  1 0 0 0 0 1   0 1 0 1 1 1   0 0 1 0 0 0   1 1 0 0 1 1   0 0 0 0 0 0   1 0 0 1 0 1   1 1 0 1 0 0
+    Message (IHateEve+) :          0 0 1 0 0 0  0 0 0 1 1 1  0 1 1 0 1 0   1 0 1 1 0 1   0 1 1 1 1 0    0 0 0 1 0 0  1 0 1 1 1 1    0 1 1 1 1 0   1 1 1 1 1 0
+
+Chaves: “ILikeEve+” (ocZeYzAl0) 1 0 1 0 0 0   0 1 1 1 0 0  0 1 1 0 0 1   0 1 1 1 1 0   0 1 1 0 0 0   1 1 0 0 1 1   0 0 0 0 0 0   1 0 0 1 0 1   1 1 0 1 0 0
+	“IHateEve+” (oQhXlzAl0) 1 0 1 0 0 0   0 1 0 0 0 0  1 0 0 0 0 1   0 1 0 1 1 1   0 0 1 0 0 0   1 1 0 0 1 1   0 0 0 0 0 0   1 0 0 1 0 1   1 1 0 1 0 0
+    

@@ -1,0 +1,13 @@
+Ex. 3 (Amigo secreto novamente)
+
+Os N amigos do Ex. 2 (Amigo secreto) gostam da brincadeira e resolvem continuar suas investigações. Para o amigo secreto, é inconveniente que haja na permutação a[] um índice i tal que a[i] = i (por quê?).
+
+Seja q_N a probabilidade de uma permutação aleatória dos números 0, ... , N - 1 não ter um tal índice i. Escreva um programa que estima q_N.
+
+Mais precisamente, seu programa deve receber como entrada inteiros NMAX e T. Seu programa deve ter como saída as estimativas obtidas para q_2, q_3, ... , q_NMAX. Para obter cada q_N, seu programa deve gerar T permutações aleatórias no processo de estimação.
+
+Bônus. Intua uma fórmula fechada para q_N para N grande.
+
+Levando em conta suas descobertas, escreva um segundo programa, digamos PermutacoesBoas.java, que gera permutações de 0, ... , N - 1 que não têm tais índices i. Note que queremos que as permutações geradas não tenham nenhum viés!
+
+Bônus. Escreva um aplicativo para celulares para gerar tais permutações e tente vendê-lo para o grupo dos N amigos smile

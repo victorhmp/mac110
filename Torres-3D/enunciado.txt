@@ -1,0 +1,62 @@
+Ex. 8 (Torres 3D)
+
+Um problema bem conhecido é o de determinar de quantos jeitos podemos colocar 8 rainhas em um tabuleiro de xadrez sem que nenhuma rainha ataque outra. Veja Web Exercises 1.4.4, 2.3.21 e 2.3.22 de IntroCS:
+
+http://introcs.cs.princeton.edu/java/14array/
+
+http://introcs.cs.princeton.edu/java/23recursion/
+
+Nosso problema é estudar de quantas formas podemos colocar 64 torres em um tabuleiro de xadrez tridimensional:
+
+https://en.wikipedia.org/wiki/Three-dimensional_chess
+
+No tabuleiro 3D, há 8 níveis, que são cada um deles um tabuleiro 8 x 8. Assim, uma posição do tabuleiro 3D corresponde a um nível (altura), uma linha e uma coluna. Naturalmente, podemos pensar que uma posição é uma tripla (i, j, k): i indica a linha, j indica a coluna e k indica a altura da posição no tabuleiro 3D.
+
+No xadrez 3D, a torre pode se mover dos jeitos usuais nos tabuleiros horizontais e também pode se mover na coluna vertical que contém sua posição atual. Assim, se uma torre está na posição (i, j, k), então ela pode se mover para a posição (i', j', k') se e só se vale uma das condições abaixo:
+
+1. (i, j) = (i', j')
+2. (i, k) = (i', k')
+3. (j, k) = (j', k')
+
+A generalização para tabuleiros N x N x N é óbvia. Seja T(N) o número de formas de dispor N * N torres no tabuleiro de xadrez 3D N x N x N sem que elas se ataquem. Escreva um programa, digamos Torres3D.java, que imprima SOMENTE T(N) e nada mais quando N é dado como argumento de linha de comando.
+
+Dica. Seja t(N) o número análogo para o xadrez 2D usual, isto é, seja t(N) o número de formas de dispor N torres em tabuleiro N x N sem que elas se ataquem. Quanto é t(N)?
+
+Exemplo. Uma disposição válida no caso N = 4 é como segue:
+
+1 0 2 3
+3 2 0 1
+0 3 1 2
+2 1 3 0
+
+A matriz 4 x 4 acima representa a seguinte disposição no tabuleiro 3D:
+
+Nível 0:
+
+. T . .
+T . . .
+. . T .
+. . . T
+
+Nível 1:
+
+. . T .
+. . . T
+. T . .
+T . . .
+
+Nível 2:
+
+T . . .
+. . T .
+. . . T
+. T . .
+
+Nível 3:
+
+. . . T
+. T . .
+T . . .
+. . T .
+
+Dicas. Uma disposição de N * N torres em um tabuleiro N x N x N pode ser representado com uma matriz bidimensional N x N (veja exemplo acima). Use esta representação. Como é cada linha de tal matriz? Como é cada coluna?

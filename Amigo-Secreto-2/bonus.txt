@@ -1,0 +1,16 @@
+/******************************************************************************
+ *
+ * MAC0110 - Introdução à Computação
+ * Aluno: Victor Hugo Miranda Pinto
+ * Numero USP: 10297720
+ * Tarefa: EX. 3 - Amigo Secreto Novamente
+ * Data: 16/04/2017
+ ******************************************************************************/
+
+Considerando uma sequência de n inteiros, de 0 a n-1, gerados aleatóriamente e colocados em um array a[n], indexado de 0 a n-1, temos:
+
+A probabilidade de o elemento a[i], sendo i seu índice, ser diferente de i, é de (n-1)/n, pois existem (n-1) inteiros no array diferentes de i e n inteiros no array. Como isso é verdade para todos os inteiros a[i], e são n inteiros no array, temos que:
+								
+											==> q_N = [ (n-1) / n ]ˆn,
+
+onde, quanto maior o valor de n, mais precisa a fórmula fica. Dessa maneira, a fórmula fechada encontrada funciona melhor com n cada vez maiores.
